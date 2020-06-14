@@ -10,11 +10,6 @@ Item::Type Item::getClassification() const
 	return classification;
 }
 
-int Item::getBonusValue() const
-{
-	return bonusValue;
-}
-
 std::ostream& operator<<(std::ostream& output, const Item& itemMessage)
 {
 	switch (itemMessage.getClassification())
@@ -29,6 +24,21 @@ std::ostream& operator<<(std::ostream& output, const Item& itemMessage)
 		output << "Sword";
 		break;
 	}
-	output << "+" << itemMessage.getBonusValue();
+	output << "+" << itemMessage.bonusValue;
 	return output;
 }
+
+bool operator<(const Item& param1, const Item& param2)
+{
+	return param1.bonusValue < param2.bonusValue;
+}
+
+int& operator+=(int& characteristic, const Item& Item)
+{
+	characteristic += Item.bonusValue;
+	return characteristic;
+}
+
+
+
+

@@ -40,7 +40,8 @@ void Player::levelUp()
 	if (
 		auto haveOne{ inventory.find(found.getClassification()) };
 		haveOne == inventory.end()
-		|| inventory[found.getClassification()].getBonusValue() < found.getBonusValue()
+		|| inventory[found.getClassification()] < found
+		//inventory[found.getClassification()].getBonusValue() < found.getBonusValue()
 		)
 	{
 		std::cout << "You keep the shiny new toy!" << std::endl;
@@ -62,13 +63,13 @@ int Player::damage() const
 	int potentialDamage{ strength };
 	if (auto sword{ inventory.find(Item::Type::sword) }; sword != inventory.end())
 	{
-		potentialDamage += sword->second.getBonusValue();
+		potentialDamage += sword->second;
 	}
 	std::normal_distribution<double> damageDealt(potentialDamage, 2.0);
 
 	std::cout << *this << std::endl;
 	std::cout << " deals ";
-	return std::max(1, (int)damageDealt(engine));
+	return std::max(1, (int)damageDealt(engine)); 
 }
 
 void Player::defense(int damage) 
@@ -76,11 +77,11 @@ void Player::defense(int damage)
 	int AC{ 0 };
 	if (auto armor{ inventory.find(Item::Type::armor) }; armor != inventory.end())
 	{
-		AC += armor->second.getBonusValue();
+		AC += armor->second;
 	}
 	if (auto shield{ inventory.find(Item::Type::shield) }; shield != inventory.end())
 	{
-		AC += shield->second.getBonusValue();
+		AC += shield->second; 
 	}
 	std::normal_distribution<double> defense(AC, 1.0 / level);
 	damage = std::max(0, damage - (int)defense(engine));

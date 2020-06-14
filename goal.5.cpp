@@ -111,7 +111,7 @@ std::vector<Monster> createMonsters(const Player& player)
 
 void monsterAttack(Player& player, const std::vector<Monster>& monsters)
 {
-	std::cout << std::endl;
+	std::cout << std::endl; 
 	std::for_each(monsters.begin(), monsters.end(), [&](const Monster& monster)
 		{
 			std::bernoulli_distribution willAttack(.75);
