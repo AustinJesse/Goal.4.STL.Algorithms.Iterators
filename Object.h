@@ -17,7 +17,7 @@ public:
 	Object() {};
 	Object(Type name, int strength, int health, int level);
 
-	friend std::ostream& operator<<(std::ostream output, const Object&);
+	friend std::ostream& operator<<(std::ostream& output, const Object& objectMessage);
 
 	bool isDead(); 
 

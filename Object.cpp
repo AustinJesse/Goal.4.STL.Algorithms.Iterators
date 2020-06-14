@@ -13,11 +13,10 @@ bool Object::isDead()
 	return health <= 0;
 }
 
-std::ostream& operator<<(std::ostream output, const Object&)
+std::ostream& operator<<(std::ostream& output, const Object & objectMessage)
 {
-	Object myInstance;
-	output << "L:" << myInstance.level << " ";
-	switch (myInstance.name)
+	output << "L:" << objectMessage.level << " ";
+	switch (objectMessage.name)
 	{
 	case Object::Type::player:
 		output << "Player";

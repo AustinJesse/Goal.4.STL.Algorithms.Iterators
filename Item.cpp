@@ -15,27 +15,9 @@ int Item::getBonusValue() const
 	return bonusValue;
 }
 
-void Item::printItem()
+std::ostream& operator<<(std::ostream& output, const Item& itemMessage)
 {
-	switch (getClassification())
-	{
-	case Item::Type::armor:
-		std::cout << "Armor";
-		break;
-	case Item::Type::shield:
-		std::cout << "Shield";
-		break;
-	case Item::Type::sword:
-		std::cout << "Sword";
-		break;
-	}
-	std::cout << "+" << getBonusValue();
-}
-
-std::ostream& operator<<(std::ostream output, const Item&)
-{
-	Item myInstance;
-	switch (myInstance.getClassification())
+	switch (itemMessage.getClassification())
 	{
 	case Item::Type::armor:
 		output << "Armor";
@@ -47,5 +29,6 @@ std::ostream& operator<<(std::ostream output, const Item&)
 		output << "Sword";
 		break;
 	}
-	output << "+" << myInstance.getBonusValue();
+	output << "+" << itemMessage.getBonusValue();
+	return output;
 }

@@ -1,25 +1,2 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Goal.4.STL.Algorithms.Iterators.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Item.cpp
-  Monster.cpp
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Monster.cpp(55,2): error C3861: 'printName': identifier not found
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Monster.cpp(64,2): error C3861: 'printName': identifier not found
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Monster.cpp(74,2): error C3861: 'printName': identifier not found
-  Object.cpp
-  Player.cpp
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Player.cpp(12,2): error C3861: 'printName': identifier not found
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Player.cpp(69,2): error C3861: 'printName': identifier not found
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Player.cpp(89,2): error C3861: 'printName': identifier not found
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Player.cpp(102,3): error C3861: 'printName': identifier not found
-  goal.5.cpp
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\goal.5.cpp(120,1): error C2059: syntax error: '<<'
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\goal.5.cpp(125,1): error C2039: 'printName': is not a member of 'Monster'
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Monster.h(6): message : see declaration of 'Monster'
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\goal.5.cpp(125,1): error C2039: '__this': is not a member of 'Monster'
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Monster.h(6): message : see declaration of 'Monster'
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\goal.5.cpp(136,35): warning C4018: '<=': signed/unsigned mismatch
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\goal.5.cpp(152,1): error C2039: 'printName': is not a member of 'Object'
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Object.h(10): message : see declaration of 'Object'
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\goal.5.cpp(152,1): error C2039: '__this': is not a member of 'Object'
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Object.h(10): message : see declaration of 'Object'
-  Generating Code...
-D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Object.cpp(38): warning C4172: returning address of local variable or temporary: output
+  Goal.4.STL.Algorithms.Iterators.vcxproj -> D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Debug\Goal.4-5.Inheritance.Operator.Overloading.exe

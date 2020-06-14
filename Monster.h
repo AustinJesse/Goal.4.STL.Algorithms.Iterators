@@ -8,7 +8,7 @@ class Monster :
 {
 public:
 	Monster() {};
-	Monster(const Player& player);
+	Monster(const Player& player); 
 	void print() const;
 	int damage() const;
 	void defense(int damage);
