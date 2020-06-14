@@ -13,6 +13,9 @@ public:
 	int getBonusValue() const;
 
 	void printItem();
+
+	friend std::ostream& operator<<(std::ostream output, const Item&);
+
 private:
 	Type classification;
 	int bonusValue;

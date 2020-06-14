@@ -31,3 +31,21 @@ void Item::printItem()
 	}
 	std::cout << "+" << getBonusValue();
 }
+
+std::ostream& operator<<(std::ostream output, const Item&)
+{
+	Item myInstance;
+	switch (myInstance.getClassification())
+	{
+	case Item::Type::armor:
+		output << "Armor";
+		break;
+	case Item::Type::shield:
+		output << "Shield";
+		break;
+	case Item::Type::sword:
+		output << "Sword";
+		break;
+	}
+	output << "+" << myInstance.getBonusValue();
+}

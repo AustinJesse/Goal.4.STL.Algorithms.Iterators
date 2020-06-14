@@ -3,6 +3,8 @@
 
 #include <map>
 #include <random>
+#include <iostream>
+
 
 
 class Object
@@ -12,11 +14,12 @@ public:
 	static std::default_random_engine engine;
 	enum class Type { player, slime, orc, sprite, dragon, numTypes };
 	
-	Object() {}
+	Object() {};
 	Object(Type name, int strength, int health, int level);
-	
-	void printName() const;
-	bool isDead();
+
+	friend std::ostream& operator<<(std::ostream output, const Object&);
+
+	bool isDead(); 
 
 
 protected:

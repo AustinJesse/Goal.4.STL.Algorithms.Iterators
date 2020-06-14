@@ -11,10 +11,6 @@
 #include "Player.h"
 #include "Monster.h"
 
-
-
-
-
 std::vector<Monster> createMonsters(const Player& player);
 
 void displayBattle(const Player& player, const std::vector<Monster>& monsters);
@@ -115,15 +111,13 @@ std::vector<Monster> createMonsters(const Player& player)
 
 void monsterAttack(Player& player, const std::vector<Monster>& monsters)
 {
-	
 	std::cout << std::endl;
 	std::for_each(monsters.begin(), monsters.end(), [&](const Monster& monster)
 		{
 			std::bernoulli_distribution willAttack(.75);
 			if (willAttack(Object::engine))
 			{
-				monster.printName();
-				std::cout << " attacks!" << std::endl;
+				std::cout <<  << " attacks!" << std::endl;
 				player.defense(monster.damage());
 			}
 			else

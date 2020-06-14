@@ -1,0 +1,2 @@
+D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Debug\Goal.4-5.Inheritance.Operator.Overloading.exe
+D:\gitHubProg2\Goal.4.STL.Algorithms.Iterators\Debug\Goal.4-5.Inheritance.Operator.Overloading.pdb
